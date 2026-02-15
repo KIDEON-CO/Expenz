@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Expenz | Simple Expense Tracker</title>
+    <meta name="description" content="Master your finances with Expenz. A high-contrast, minimalist, 100% private expense tracker for iOS. Local data storage, no tracking, pure insights.">
+    <meta name="keywords" content="expense tracker, minimalist budget app, private finance tracker, iOS money manager, black and white finance app, Expenz, smart spending">
+    
+    <meta property="og:title" content="Expenz | Simple Expense Tracker">
+    <meta property="og:description" content="The ultimate private, high-contrast expense tracker for iOS. No accounts, no servers.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://expenz.kideon.co/">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Expenz",
+      "operatingSystem": "iOS",
+      "applicationCategory": "FinanceApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; background-color: #000000; color: #ffffff; overflow-x: hidden; }
+        .glass-nav { background: rgba(0, 0, 0, 0.8); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+        .card-white { background: #ffffff; color: #000000; }
+        .border-white-faint { border: 1px solid rgba(255, 255, 255, 0.1); }
+        
+        /* FADE IN ANIMATION CSS */
+        .reveal { position: relative; transform: translateY(30px); opacity: 0; transition: all 0.8s ease-out; }
+        .reveal.active { transform: translateY(0); opacity: 1; }
+        
+        ::selection { background: #ffffff; color: #000000; }
+    </style>
+</head>
+<body class="selection:bg-white selection:text-black">
+
+    <nav class="fixed w-full z-50 glass-nav top-0">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img 
+  src="icon.png" 
+  class="w-10 h-10 rounded-xl border border-white/30 shadow-[0_0_6px_rgba(255,255,255,0.3)]"
+/>
+
+
+                <span class="text-2xl font-black tracking-tighter text-white uppercase">Expenz</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest">
+                <a href="#home" class="hover:text-gray-400 transition">Home</a>
+                <a href="#privacy" class="hover:text-gray-400 transition">Privacy</a>
+                <a href="#terms" class="hover:text-gray-400 transition">Terms</a>
+                <a href="#contact" class="hover:text-gray-400 transition">Contact</a>
+            </div>
+            <a href="#" class="bg-white text-black text-[10px] px-4 py-2 rounded-full font-black uppercase tracking-tighter hover:bg-gray-200 transition">Get App</a>
+        </div>
+    </nav>
+
+    <header id="home" class="pt-48 pb-32 px-6 reveal">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-6xl md:text-9xl font-black text-white mb-8 tracking-tighter leading-none">
+                PURE FOCUS.<br>SMART SPEND.
+            </h1>
+            <p class="text-gray-500 text-lg md:text-2xl max-w-2xl mx-auto mb-12 font-light leading-relaxed">
+                The high-contrast expense tracker built for the minimalist. <br>
+                <span class="text-white font-medium">No cloud. No tracking.</span>
+            </p>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+                <a href="#" class="bg-white text-black px-12 py-5 rounded-2xl font-black text-xl hover:scale-105 transition flex items-center shadow-2xl shadow-white/10">
+                    <i class="fab fa-apple mr-3 text-2xl"></i> Download App
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 space-y-24">
+
+        <section id="privacy" class="scroll-mt-32 reveal">
+            <div class="p-8 md:p-16 rounded-[3rem] card-white">
+                <h2 class="text-4xl md:text-6xl font-black tracking-tighter uppercase mb-10">Privacy Policy</h2>
+                
+                <div class="space-y-8 text-sm md:text-base leading-relaxed font-medium">
+                    <div class="bg-black/5 p-6 rounded-2xl border border-black/10">
+                        <p class="font-black uppercase tracking-widest text-xs mb-2">Effective Date: February 15, 2026</p>
+                        <p>Expenz ("we", "our", or "us") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we handle your data when you use the Expenz app.</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-10">
+                        <div>
+                            <h4 class="text-xl font-black mb-3 uppercase tracking-tighter ">1. Information We Collect</h4>
+                            <p class="text-gray-700">Expenz is designed to work <strong>locally on your device</strong>. We do not collect or transmit your personal data to any servers. The only data stored is what you enter in the app, such as expenses, custom categories, notes, and budget limits.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-black mb-3 uppercase tracking-tighter ">2. Data Usage</h4>
+                            <p class="text-gray-700">Your data is used solely to provide the functionality of the app: calculating totals, displaying charts, and handling CSV exports. We do not use your data for advertising, analytics, or marketing purposes.</p>
+                        </div>
+                    </div>
+
+                    <div class="border-y border-black/10 py-10">
+                        <h4 class="text-xl font-black mb-3 uppercase tracking-tighter ">3. Pro Features</h4>
+                        <p class="text-gray-700">If you choose to upgrade to Expenz Pro, any purchase information is processed through Apple's In-App Purchase system. We do not store or have access to your payment information.</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-10">
+                        <div>
+                            <h4 class="text-xl font-black mb-3 uppercase tracking-tighter ">4. Data Sharing & Security</h4>
+                            <p class="text-gray-700">Expenz does not share your data with third parties. Any export is controlled entirely by you. Your data is protected by your device's security features.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-black mb-3 uppercase tracking-tighter ">5. Children</h4>
+                            <p class="text-gray-700">Expenz is suitable for all ages. We do not collect or transmit any personal information from children, giving parents full control.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="terms" class="scroll-mt-32 reveal">
+            <div class="p-8 md:p-16 rounded-[3rem] border-white-faint glass">
+                <h2 class="text-4xl md:text-6xl font-black tracking-tighter uppercase mb-6">Terms of Use</h2>
+                <p class="text-gray-400 mb-10 font-medium">By using Expenz, you agree to the following terms. Expenz is provided "as is" without warranties of any kind.</p>
+                
+                <div class="grid md:grid-cols-3 gap-12 text-sm">
+                    <div class="space-y-4">
+                        <div class="w-8 h-8 bg-white text-black flex items-center justify-center font-black rounded-full">1</div>
+                        <h4 class="text-white font-bold uppercase tracking-widest text-xs">Usage License</h4>
+                        <p class="text-gray-500 leading-relaxed">We grant you a personal, non-exclusive license to use the app for personal financial tracking.</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="w-8 h-8 bg-white text-black flex items-center justify-center font-black rounded-full">2</div>
+                        <h4 class="text-white font-bold uppercase tracking-widest text-xs">Pro Subscriptions</h4>
+                        <p class="text-gray-500 leading-relaxed">Pro features are billed via your Apple ID. Subscriptions renew automatically unless canceled in your iTunes settings 24 hours before the period ends.</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="w-8 h-8 bg-white text-black flex items-center justify-center font-black rounded-full">3</div>
+                        <h4 class="text-white font-bold uppercase tracking-widest text-xs">Data Responsibility</h4>
+                        <p class="text-gray-500 leading-relaxed">Since Expenz stores data locally, we are not responsible for data loss due to device damage or app deletion. We recommend using iCloud backups.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-24 text-center scroll-mt-32 reveal">
+            <div class="w-20 h-[1px] bg-white mx-auto mb-12"></div>
+            <h2 class="text-3xl font-black uppercase tracking-widest mb-4">Contact Us</h2>
+            <p class="text-gray-500 mb-10 max-w-sm mx-auto">Found a bug or have a suggestion? We're here to help.</p>
+            <a href="mailto:kideoninc@gmail.com" class="text-2xl md:text-5xl font-light hover:text-gray-400 transition underline decoration-1 underline-offset-8">
+                kideoninc@gmail.com
+            </a>
+        </section>
+
+    </main>
+
+    <footer class="py-20 bg-white text-black mt-20">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-center md:text-left">
+                <p class="text-2xl font-black uppercase tracking-tighter">Expenz</p>
+                <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-gray-500">Built for the Individual</p>
+            </div>
+            <p class="text-[10px] font-black uppercase tracking-widest">
+                © 2026 KIDEON INC • All Rights Reserved
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal();
+    </script>
+
+</body>
+</html>
